@@ -4,18 +4,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    transition: background-color 0.5s ease;
 }
 
 .container {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 400px;
+    max-width: 600px;
     width: 100%;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 h1 {
@@ -73,4 +80,80 @@ h1 {
 .error {
     color: red;
     font-weight: bold;
+}
+
+#favorites-container {
+    margin-bottom: 20px;
+}
+
+#favorites-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#favorites-list li {
+    background-color: #e9ecef;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#favorites-list li:hover {
+    background-color: #dee2e6;
+}
+
+.forecast-display {
+    margin-top: 20px;
+}
+
+.forecast-item {
+    display: inline-block;
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.loading-indicator {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #007bff;
+}
+
+#language-select-container {
+    margin-top: 20px;
+}
+
+#language-select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Weather-based backgrounds */
+.weather-sunny {
+    background: linear-gradient(to bottom, #87CEEB, #FFD700);
+}
+
+.weather-cloudy {
+    background: linear-gradient(to bottom, #B0C4DE, #778899);
+}
+
+.weather-rainy {
+    background: linear-gradient(to bottom, #708090, #2F4F4F);
+}
+
+.weather-snowy {
+    background: linear-gradient(to bottom, #F0F8FF, #B0E0E6);
+}
+
+.weather-clear {
+    background: linear-gradient(to bottom, #00BFFF, #FFD700);
 }

@@ -12,9 +12,32 @@
         <div class="weather-input">
             <input type="text" id="city-input" placeholder="Enter city name" />
             <button id="get-weather-btn">Get Weather</button>
+            <button id="current-location-btn" title="Get weather for current location">📍</button>
+            <select id="unit-select" title="Select temperature unit">
+                <option value="metric" selected>°C</option>
+                <option value="imperial">°F</option>
+            </select>
+        </div>
+        <div id="favorites-container">
+            <h3>Favorite Cities</h3>
+            <ul id="favorites-list"></ul>
         </div>
         <div id="weather-display" class="weather-display">
             <!-- Weather information will be displayed here -->
+        </div>
+        <div id="forecast-display" class="forecast-display">
+            <!-- 5-day forecast will be displayed here -->
+        </div>
+        <div id="loading-indicator" class="loading-indicator" style="display:none;">Loading...</div>
+        <div id="language-select-container">
+            <label for="language-select">Language:</label>
+            <select id="language-select">
+                <option value="en" selected>English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="zh">Chinese</option>
+            </select>
         </div>
     </div>
     <script src="script.js"></script>
