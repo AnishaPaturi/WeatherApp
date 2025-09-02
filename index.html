@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,6 +18,7 @@
                 <option value="metric" selected>°C</option>
                 <option value="imperial">°F</option>
             </select>
+            <button id="dark-mode-toggle" title="Toggle dark mode">🌓</button>
         </div>
         <div id="favorites-container">
             <h3>Favorite Cities</h3>
@@ -28,6 +30,12 @@
         <div id="forecast-display" class="forecast-display">
             <!-- 5-day forecast will be displayed here -->
         </div>
+        <div id="weather-alerts" class="weather-alerts">
+            <!-- Weather alerts will be displayed here -->
+        </div>
+        <div id="weather-map" class="weather-map">
+            <!-- Weather map will be displayed here -->
+        </div>
         <div id="loading-indicator" class="loading-indicator" style="display:none;">Loading...</div>
         <div id="language-select-container">
             <label for="language-select">Language:</label>
@@ -38,6 +46,11 @@
                 <option value="de">German</option>
                 <option value="zh">Chinese</option>
             </select>
+        </div>
+        <div id="widget-container">
+            <h3>Weather Widget</h3>
+            <button id="generate-widget-btn">Generate Widget Code</button>
+            <textarea id="widget-code" readonly></textarea>
         </div>
     </div>
     <script src="script.js"></script>
